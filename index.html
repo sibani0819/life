@@ -1,40 +1,113 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings Report – Interactive RevealJS Presentation</title>
 
-		<title>reveal.js</title>
+  <!-- Reveal core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <!-- Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+</head>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+<body>
+<div class="reveal">
+<div class="slides">
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+  <!-- Title Slide -->
+  <section>
+    <h1>Quarterly Earnings Report</h1>
+    <h3>Interactive Technical Report</h3>
+    <p>Email: <strong>23f3003311@ds.study.iitm.ac.in</strong></p>
+    <aside class="notes">
+      Welcome! Start by introducing the objective of the financial report.
+    </aside>
+  </section>
+
+  <!-- Markdown Slide -->
+  <section data-markdown>
+    <textarea data-template>
+## Financial Overview – Q4  
+### Key Highlights
+- Revenue increased by 12%  
+- Expenses reduced by 6%  
+- Net profit margin improved
+
+---
+
+## CEO Message
+“We continue to improve efficiency and strengthen our market position.”
+    </textarea>
+
+    <aside class="notes">
+      Mention how Markdown allows quick content updates.
+    </aside>
+  </section>
+
+  <!-- Fragment Animation -->
+  <section>
+    <h2>Quarterly Growth Drivers</h2>
+    <ul>
+      <li class="fragment">New product launch</li>
+      <li class="fragment">Improved operational efficiency</li>
+      <li class="fragment fade-up">Cost optimization programs</li>
+    </ul>
+    <aside class="notes">
+      Click to reveal each factor gradually.
+    </aside>
+  </section>
+
+  <!-- Code highlighting -->
+  <section>
+    <h2>Revenue Forecast Model</h2>
+    <pre>
+      <code class="python">
+import pandas as pd
+
+df = pd.read_csv("revenue.csv")
+df["forecast"] = df["current"] * 1.08  # 8% projected growth
+print(df.head())
+      </code>
+    </pre>
+    <aside class="notes">
+      This example demonstrates syntax highlighted Python analysis code.
+    </aside>
+  </section>
+
+  <!-- Math equations -->
+  <section>
+    <h2>Financial Formula</h2>
+    <p>Net Profit Margin:</p>
+    \[
+      \text{NPM} = \frac{\text{Net Income}}{\text{Revenue}} \times 100
+    \]
+    <aside class="notes">
+      Explain how MathJax renders financial equations.
+    </aside>
+  </section>
+
+</div>
+</div>
+
+<!-- Reveal.js -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+<!-- Plugins -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+<script>
+Reveal.initialize({
+  hash: true,
+  plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+});
+</script>
+
+</body>
 </html>
